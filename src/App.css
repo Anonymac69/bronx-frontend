@@ -1,38 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700&display=swap');
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  background: url('https://images.unsplash.com/photo-1454944338482-a69bb95894af?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1352&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  font-family: 'Raleway', sans-serif;
+  justify-content: space-between !important;
+  min-height: 100vh;
+}
+
+
+
+/* Backend styles */
+.backend {
+  background: #fff;
+  border-radius: .2rem;
+  box-shadow: 0 3px 10px #e0e0e0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Card styles */
+.card {
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 3px 10px #e0e0e0;
+  border-radius: .2rem;
+  display: flex;
+  flex-flow: column;
+  height: 10rem;
+  justify-content: center;
+  margin: 1rem .5rem;
+  padding: .5rem;
+  animation: fine infinite 20s;
+  width: 15rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+@keyframes fine {
+  10% { background: #f2faf6; }
+  250% { background: #f9faf2; }
+  50% { background: #fbf9ff; }
+  75% { background: #fffdf9; }
+  100% { background: #f9ffff; }
+}
+
+
+/* Footer styles */
+.footer {
+  color: #8a8a8a;
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  width: 100%;
+}
+
+
+
+/* Navigation styles */
+.link-wrap, 
+.link-wrap li {
+  display: flex;
+  list-style: none;
+}
+
+.link-wrap li a {
+  color: #fff;
+  font-size: .9rem;
+  margin: 0 .5rem;
+  text-decoration: none;
+}
+
+.nav-main {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.nav-wrap {
+  background: #070707;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

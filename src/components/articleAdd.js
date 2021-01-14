@@ -1,5 +1,5 @@
-import axios from "axios";
 import React from "react";
+import axios from "axios";
 
 export class ArticleAdd extends React.Component {
   constructor(props) {
@@ -38,14 +38,10 @@ export class ArticleAdd extends React.Component {
     return (
       <div className="box">
         <form onSubmit={this.handleSubmit} className="forms">
-          <label>Title: </label>{" "}
+          <label>Title: </label>
           <input type="text" name="title" onChange={this.handleInputChange} />
           <label> Content: </label>
-          <textarea
-            type="text"
-            name="content"
-            onChange={this.handleInputChange}
-          />
+          <textarea type="text" name="content" onChange={this.handleInputChange} />
           <label> Author: </label>
           <input type="text" name="author" onChange={this.handleInputChange} />
           <label> Email: </label>

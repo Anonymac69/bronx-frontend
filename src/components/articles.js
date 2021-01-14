@@ -15,7 +15,7 @@ export class Articles extends Component {
     return (
       <div className="card-single">
         {this.state.articles.map((article) => (
-          <p key={article.id}>
+          <p className="card-alt" key={article.id}>
             <Link className="link" to={`/articles/${article.id}`}>
               {article.title}
             </Link>

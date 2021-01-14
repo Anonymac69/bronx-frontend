@@ -1,15 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-// const [article, setArticle] = React.useState({
-//   title: "",
-//   content: "",
-//   author: "",
-//   email: "",
-// });
-
-// const [isLoading, setIsLoading] = React.useState(false)
-
 export class ArticleEdit extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +18,6 @@ export class ArticleEdit extends React.Component {
 
   componentDidMount = () => {
     this.setState({ isLoading: true });
-    this.setState({ updated: true });
     axios
       .get(`http://localhost:8000/article/${this.props.match.params.id}`)
       .then((res) => {
@@ -50,6 +40,8 @@ export class ArticleEdit extends React.Component {
       .put(`http://localhost:8000/article/${this.props.match.params.id}/`, data)
       .then((res) => {
         this.props.history.push(`/`);
+        this.setState({ updated: true });
+        console.log(this.state.updated);
       })
       .catch((err) => console.log(err.response));
   }
@@ -61,34 +53,10 @@ export class ArticleEdit extends React.Component {
     return (
       <div className="box">
         <form onSubmit={this.handleSubmit} className="forms">
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            placeholder="Title"
-            onChange={this.handleChange}
-          />
-          <textarea
-            type="text"
-            name="content"
-            value={this.state.content}
-            placeholder="Content"
-            onChange={this.handleChange}
-          />
-          <input
-            type="text"
-            name="author"
-            value={this.state.author}
-            placeholder="Author"
-            onChange={this.handleChange}
-          />
-          <input
-            type="text"
-            name="email"
-            value={this.state.email}
-            placeholder="Email"
-            onChange={this.handleChange}
-          />
+          <input type="text" name="title" value={this.state.title} placeholder="Title" onChange={this.handleChange} />
+          <textarea type="text" name="content" value={this.state.content} placeholder="Content" onChange={this.handleChange} />
+          <input type="text" name="author" value={this.state.author} placeholder="Author" onChange={this.handleChange} />
+          <input type="text" name="email" value={this.state.email} placeholder="Email" onChange={this.handleChange} />
           <input type="submit" value="Submit" />
         </form>
       </div>

@@ -58,6 +58,18 @@
   width: 15rem;
 }
 
+.card-alt {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0.2rem;
+  display: flex;
+  height: 0.5rem;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  width: 20rem;
+}
+
 .card-btns {
   border: 1px soiid red !important;
   display: flex;

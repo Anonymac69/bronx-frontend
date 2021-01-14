@@ -46,7 +46,9 @@ function Article({ match }) {
         </button>
         {/* <button className="btn"><a className="link" href={`/articles/${article.id}/edit`}>Edit</a></button> */}
         <button className="btn">
-          <Link to={`/articles/${article.id}/edit`}>Edit</Link>
+          <Link className="link" to={`/articles/${article.id}/edit`}>
+            Edit
+          </Link>
         </button>
         <button className="btn" onClick={deleteArticle}>
           Delete
